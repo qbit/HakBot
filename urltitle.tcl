@@ -86,7 +86,7 @@ set urltitle(last) 111 			;# stores time of last eggdrop use, don't change..
 package require http			;# You need the http package..
 package require htmlparse	;# You need htmlparse package.
 package require tls
-::http::register https 443 [list ::tls::socket -require 0 -request 1]
+::http::register https 443 [list ::tls::socket -require 0 -request 1 -ssl3 0]
 setudef flag urltitle			;# Channel flag to enable script.
 setudef flag logurltitle		;# Channel flag to enable logging of script.
 set urltitlever "0.1.9"
